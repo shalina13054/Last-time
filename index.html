@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Analytics Practice Site</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX'); <!-- replace with your GTM ID -->
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <h1>Welcome to My Practice Website</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Learn & Practice GA4, GTM, and Google Ads</h2>
+    <p>This site is for practicing event tracking and conversions.</p>
+    <button id="ctaButton">Click Me</button>
+  </main>
+
+  <footer>
+    <p>© 2025 My Practice Site</p>
+  </footer>
+
+  <script>
+    // Example of a custom event you can track via GTM
+    document.getElementById("ctaButton").addEventListener("click", function() {
+      dataLayer.push({
+        'event': 'cta_click',
+        'button_name': 'Click Me Button'
+      });
+      alert("Button clicked! Check GTM preview mode.");
+    });
+  </script>
+</body>
+</html>
